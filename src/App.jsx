@@ -12,7 +12,7 @@ import {
   NavLink,
   Switch,
 } from 'react-router-dom';
-var data = [res];
+var data = res;
 function App() {
   const [name, setName] = useState('');
   const [pswd, setPswd] = useState('');
@@ -120,7 +120,7 @@ function App() {
         },
       },
     };
-    //data.push([empObj]);
+    data.push([empObj]);
     console.log(data);
   }
 
