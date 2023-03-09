@@ -107,6 +107,17 @@ function App() {
       setErrmsg('User ID already exists!!! Please try another');
       setOpen((o) => !o);
     }
+    var empObj = {
+      [regname]: {
+        password: regpsd,
+        newUser: 'Y',
+        name: '',
+        notes: {
+          id: '1',
+          note: 'lorem ipsum dolor sit amet new one',
+        },
+      },
+    };
   }
 
   return (

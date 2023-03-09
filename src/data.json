@@ -1,6 +1,7 @@
 {
   "venky": {
     "password": "aa123",
+    "newUser": "N",
     "name": "Hulk",
     "notes": {
       "id": "1",
@@ -9,6 +10,7 @@
   },
   "aravind": {
     "password": "123456",
+    "newUser": "N",
     "name": "Iron man",
     "notes": {
       "id": "1",
