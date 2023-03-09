@@ -1,0 +1,18 @@
+{
+  "venky": {
+    "password": "aa123",
+    "name": "Hulk",
+    "notes": {
+      "id": "1",
+      "note": "lorem ipsum dolor sit amet 1 one"
+    }
+  },
+  "aravind": {
+    "password": "123456",
+    "name": "Iron man",
+    "notes": {
+      "id": "1",
+      "note": "lorem ipsum dolor sit amet 1 one"
+    }
+  }
+}
