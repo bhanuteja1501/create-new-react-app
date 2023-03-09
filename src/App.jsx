@@ -66,7 +66,6 @@ function App() {
   const [regname, setRegname] = useState('');
   const [regpsd, setRegpsd] = useState('');
   const [regcnfpsd, setRegcnfpsd] = useState('');
-
   function regValidation(e) {
     e.preventDefault();
     var value = e.target.name;
