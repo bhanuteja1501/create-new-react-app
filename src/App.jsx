@@ -84,7 +84,7 @@ function App() {
     var noUser = keys.filter((key) => {
       return key == regname;
     });
-    console.log(noUser);
+
     if (
       regname != '' &&
       regpsd != '' &&
