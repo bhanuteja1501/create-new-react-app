@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import Node from 'node';
 import './style.css';
-import data from './data.json';
+import res from './data.json';
 import Popup from 'reactjs-popup';
 import Login from './Login';
+const fs = require('fs');
 import {
   BrowserRouter as Router,
   Route,
@@ -10,7 +12,7 @@ import {
   NavLink,
   Switch,
 } from 'react-router-dom';
-
+var data = [res];
 function App() {
   const [name, setName] = useState('');
   const [pswd, setPswd] = useState('');
@@ -118,6 +120,8 @@ function App() {
         },
       },
     };
+    //data.push([empObj]);
+    console.log(data);
   }
 
   return (

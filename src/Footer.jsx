@@ -5,7 +5,7 @@ import './style.css';
 function Footer() {
   return (
     <div className="footer">
-      <h3>Footer</h3>
+      <h5>© BHANU TEJA DADI</h5>
     </div>
   );
 }
