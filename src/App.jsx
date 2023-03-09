@@ -36,6 +36,7 @@ function App() {
       setOpen((o) => !o);
     } else {
       var keys = Object.keys(data);
+      console.log(keys);
       var uName = keys.filter((key) => {
         return key == name;
       });
@@ -94,6 +95,18 @@ function App() {
       noUser[0] == undefined &&
       regpsd == regcnfpsd
     ) {
+      var empObj = {
+        [regname]: {
+          password: regpsd,
+          newUser: 'Y',
+          name: '',
+          notes: {
+            id: '1',
+            note: 'lorem ipsum dolor sit amet new one',
+          },
+        },
+      };
+      data.push(empObj);
       setErrmsg('User Successfully registered');
       setOpen((o) => !o);
     } else if (regpsd != regcnfpsd && regpsd != '') {
@@ -120,7 +133,7 @@ function App() {
         },
       },
     };
-    data.push([empObj]);
+    data.push(empObj);
     console.log(data);
   }
 
