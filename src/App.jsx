@@ -5,6 +5,12 @@ import res from './data.json';
 import Popup from 'reactjs-popup';
 import Login from './Login';
 const fs = require('fs');
+var newArr = res.userData;
+var arr = [];
+for (i in newArr) {
+  arr.push(newArr[i].key);
+  console.log(arr);
+}
 import {
   BrowserRouter as Router,
   Route,

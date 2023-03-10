@@ -1,24 +1,26 @@
-[
-  {
-    "venky": {
-      "password": "aa123",
-      "newUser": "N",
-      "name": "Hulk",
-      "notes": {
-        "id": "1",
-        "note": "lorem ipsum dolor sit amet 1 one"
+{
+  "userData": [
+    {
+      "venky": {
+        "password": "aa123",
+        "newUser": "N",
+        "name": "Hulk",
+        "notes": {
+          "id": "1",
+          "note": "lorem ipsum dolor sit amet 1 one"
+        }
+      }
+    },
+    {
+      "aravind": {
+        "password": "123456",
+        "newUser": "N",
+        "name": "Iron man",
+        "notes": {
+          "id": "1",
+          "note": "lorem ipsum dolor sit amet 1 one"
+        }
       }
     }
-  },
-  {
-    "aravind": {
-      "password": "123456",
-      "newUser": "N",
-      "name": "Iron man",
-      "notes": {
-        "id": "1",
-        "note": "lorem ipsum dolor sit amet 1 one"
-      }
-    }
-  }
-]
+  ]
+}
