@@ -35,13 +35,14 @@ function App() {
       setErrmsg('Enetr login details !!!');
       setOpen((o) => !o);
     } else {
-      var keys = Object.keys(data);
-      console.log(keys);
-      var uName = keys.filter((key) => {
-        return key == name;
+      for (var property in data) {
+        //console.log( Object.keys(data[0]));
+      }
+      var uName = data.filter((key) => {
+        return Object.keys(key) == name;
       });
       console.log(uName);
-      if (uName[0] != undefined && data[uName[0]].password == pswd) {
+      if (uName[0] != undefined && uName[0].password == pswd) {
         console.log('Login success');
       } else {
         if (!uName[0]) {
