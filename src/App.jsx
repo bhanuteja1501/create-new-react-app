@@ -108,7 +108,6 @@ function App() {
           },
         },
       };
-      data.push(empObj);
       setErrmsg('User Successfully registered');
       setOpen((o) => !o);
     } else if (regpsd != regcnfpsd && regpsd != '') {
@@ -136,7 +135,7 @@ function App() {
       },
     };
     data.userData.push(empObj);
-    console.log(data);
+    fs.writeFile('new.txt', data);
   }
 
   return (
