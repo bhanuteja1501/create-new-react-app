@@ -135,7 +135,7 @@ function App() {
         },
       },
     };
-    data.push(empObj);
+    data.userData.push(empObj);
     console.log(data);
   }
 
