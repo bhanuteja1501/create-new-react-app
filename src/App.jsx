@@ -5,12 +5,7 @@ import res from './data.json';
 import Popup from 'reactjs-popup';
 import Login from './Login';
 const fs = require('fs');
-var newArr = res.userData;
-var arr = [];
-for (i in newArr) {
-  arr.push(newArr[i].key);
-  console.log(arr);
-}
+
 import {
   BrowserRouter as Router,
   Route,
@@ -44,11 +39,11 @@ function App() {
       for (var property in data) {
         //console.log( Object.keys(data[0]));
       }
-      var uName = data.filter((key) => {
+      var uName = res.userData.filter((key) => {
         return Object.keys(key) == name;
       });
       console.log(uName);
-      if (uName[0] != undefined && uName[0].password == pswd) {
+      if (!!uName[0] && uName[0][name].password == pswd) {
         console.log('Login success');
       } else {
         if (!uName[0]) {
