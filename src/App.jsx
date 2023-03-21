@@ -2,26 +2,24 @@ import React, { useState } from 'react';
 import Node from 'node';
 import './style.css';
 import res from './data.json';
-import Popup from 'reactjs-popup';
+
 import Login from './Login';
+import Popuphtml from './Popuphtml';
+
 const fs = require('fs');
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  NavLink,
-  Switch,
-} from 'react-router-dom';
 var data = res;
 function App() {
   const [name, setName] = useState('');
   const [pswd, setPswd] = useState('');
   const [errmsg, setErrmsg] = useState('');
   const [open, setOpen] = useState(false);
-  const closeModal = () => setOpen(false);
+  //const closeModal = () => setOpen(false);
   const [userregistered, setUserregistered] = useState(true);
 
+  function closeModal() {
+    setOpen(false);
+  }
   function validate(e) {
     let value = e.target.name;
     if (value === 'uName') {
@@ -139,7 +137,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <div>
       <div>
         {userregistered ? (
           <div>
@@ -177,10 +175,14 @@ function App() {
             </form>
           </div>
         )}
-
-       
       </div>
-    </Router>
+      <Popuphtml
+        errmsg={errmsg}
+        open={open}
+        closeModel={closeModal}
+        register={register}
+      />
+    </div>
   );
 }
 

@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Popup from 'reactjs-popup';
 
 function Popuphtml(props) {
+  const [open, setOpen] = useState(false);
+  const closeModal = () => setOpen(false);
   return (
     <div>
-      <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+      <Popup open={props.open} closeOnDocumentClick onClose={closeModal}>
         <div className="modal">
           <a className="close" onClick={closeModal}>
             &times;
           </a>
           <div className="header"> WARNING </div>
-          <div className="content"> {errmsg} </div>
-          <button className="button" onClick={register}>
+          <div className="content"> {props.errmsg} </div>
+          <button className="button" onClick={props.register}>
             Register
           </button>
           <button className="button" onClick={closeModal}>
@@ -22,3 +25,5 @@ function Popuphtml(props) {
     </div>
   );
 }
+
+export default Popuphtml;
